@@ -1,26 +1,28 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 //importing all the compoennts that we need to mdule 
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { PostsComponent } from './posts/posts.component';
-import { UsersComponent } from './users/users.component';
-import { DetailsComponent } from './details/details.component';
+import { ViewComponent } from './view/view.component';
+import { CreateComponent } from './create/create.component';
+import { UpdateComponent } from './update/update.component';
+
 
 const routes: Routes = [
   {
     path : '',
-    component : UsersComponent
+    component : ViewComponent
   },
   {
-    path : 'details/:id',
-    component : DetailsComponent
+    path : 'create',
+    component : CreateComponent
   },
   {
-    path : 'posts',
-    component : PostsComponent
+    path : 'update',
+    component : UpdateComponent
   }
-
+ 
 ];
 
 @NgModule({
